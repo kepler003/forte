@@ -48,10 +48,33 @@ const EditIntern = () => {
     }));
   };
 
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const isInvalid =
+      nameErrors.length ||
+      emailErrors.length ||
+      internshipStartErrors.length ||
+      internshipEndErrors.length;
+
+    if (isInvalid) return;
+
+    fetch(`http://localhost:3001/interns/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(intern),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).catch((err) => {
+      console.log('Error while updating intern data');
+      throw err;
+    });
+  };
+
   return (
     <div>
       <NavLink to='/'>Back to list </NavLink>
-      <form>
+      <form onSubmit={onSubmitHandler}>
         <Input
           label='Name'
           type='text'
