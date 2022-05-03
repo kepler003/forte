@@ -1,0 +1,27 @@
+.text-heading {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.text-l {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.text-medium {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+
+.text-medium-l {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
