@@ -1,0 +1,30 @@
+.button {
+  padding: 1.2rem 4rem;
+  background-color: var(--color-base-1);
+  color: var(--color-white);
+  border: none;
+  transition: background-color 100ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--color-base-3);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--color-focus);
+}
+
+.button:active {
+  background-color: var(--color-base-2);
+}
+
+.button:disabled {
+  color: var(--color-base-5);
+  opacity: 0.25;
+}
+
+.button:disabled * {
+  opacity: 0.5;
+}
