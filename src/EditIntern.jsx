@@ -22,14 +22,52 @@ const EditIntern = () => {
       });
   }, [id]);
 
+  useEffect(() => console.log(intern), [intern]);
+
+  const onChangeHandler = (e) => {
+    const name = e.target.getAttribute('name');
+    let value = e.target.value;
+
+    if (name === 'internshipStart' || name === 'internshipEnd') {
+      value = value
+        ? new Date(value).toISOString().replace(':00.000Z', '+00Z')
+        : '';
+    }
+
+    setIntern((prevIntern) => ({
+      ...prevIntern,
+      [name]: value,
+    }));
+  };
+
   return (
     <div>
       <NavLink to='/'>Back to list </NavLink>
       <form>
-        <Input label='Name' type='text' name='name' />
-        <Input label='Email' type='email' name='email' />
-        <Input label='Internship start' type='date' name='internshipStart' />
-        <Input label='Internship end' type='date' name='internshipEnd' />
+        <Input
+          label='Name'
+          type='text'
+          name='name'
+          onChange={onChangeHandler}
+        />
+        <Input
+          label='Email'
+          type='email'
+          name='email'
+          onChange={onChangeHandler}
+        />
+        <Input
+          label='Internship start'
+          type='date'
+          name='internshipStart'
+          onChange={onChangeHandler}
+        />
+        <Input
+          label='Internship end'
+          type='date'
+          name='internshipEnd'
+          onChange={onChangeHandler}
+        />
         <Input type='submit' />
       </form>
     </div>
