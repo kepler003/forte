@@ -11,4 +11,5 @@
   --color-base-8: #fcfcfc;
   --color-base-9: #ffffff;
   --color-base: var(--color-base-1);
+  --color-white: var(--color-base-9);
 }
