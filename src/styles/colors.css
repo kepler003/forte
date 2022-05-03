@@ -1,13 +1,14 @@
 :root {
   --color-error: #a3270c;
   --color-focus: #d3f2ff;
-  --color-base: #222222;
-  --color-base-1: #3b3b3b;
-  --color-base-2: #555555;
-  --color-base-3: #afafaf;
-  --color-base-4: #ededed;
-  --color-base-5: #f2f2f2;
-  --color-base-6: #f7f7f7;
-  --color-base-7: #fcfcfc;
-  --color-base-8: #ffffff;
+  --color-base-1: #222222;
+  --color-base-2: #3b3b3b;
+  --color-base-3: #555555;
+  --color-base-4: #afafaf;
+  --color-base-5: #ededed;
+  --color-base-6: #f2f2f2;
+  --color-base-7: #f7f7f7;
+  --color-base-8: #fcfcfc;
+  --color-base-9: #ffffff;
+  --color-base: var(--color-base-1);
 }
