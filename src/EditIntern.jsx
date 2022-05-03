@@ -48,24 +48,28 @@ const EditIntern = () => {
           label='Name'
           type='text'
           name='name'
+          value={intern.name || ''}
           onChange={onChangeHandler}
         />
         <Input
           label='Email'
           type='email'
           name='email'
+          value={intern.email || ''}
           onChange={onChangeHandler}
         />
         <Input
           label='Internship start'
           type='date'
           name='internshipStart'
+          value={intern.internshipStart?.split('T')[0] || ''}
           onChange={onChangeHandler}
         />
         <Input
           label='Internship end'
           type='date'
           name='internshipEnd'
+          value={intern.internshipEnd?.split('T')[0] || ''}
           onChange={onChangeHandler}
         />
         <Input type='submit' />
