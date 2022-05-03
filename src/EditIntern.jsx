@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import useValidator from './hooks/useValidator';
 import Input from './components/Input';
 
 const EditIntern = () => {
   const { id } = useParams();
   const [intern, setIntern] = useState({});
+  const nameErrors = useValidator(intern.name);
+  const emailErrors = useValidator(intern.email, {
+    type: 'email',
+  });
+  const internshipStartErrors = useValidator(intern.internshipStart);
+  const internshipEndErrors = useValidator(intern.internshipEnd, {
+    type: 'date',
+    min: intern.internshipStart,
+  });
 
   // Load intern from db
   useEffect(() => {
@@ -21,8 +31,6 @@ const EditIntern = () => {
         throw err;
       });
   }, [id]);
-
-  useEffect(() => console.log(intern), [intern]);
 
   const onChangeHandler = (e) => {
     const name = e.target.getAttribute('name');
@@ -50,6 +58,7 @@ const EditIntern = () => {
           name='name'
           value={intern.name || ''}
           onChange={onChangeHandler}
+          error={nameErrors[0]}
         />
         <Input
           label='Email'
@@ -57,6 +66,7 @@ const EditIntern = () => {
           name='email'
           value={intern.email || ''}
           onChange={onChangeHandler}
+          error={emailErrors[0]}
         />
         <Input
           label='Internship start'
@@ -64,6 +74,7 @@ const EditIntern = () => {
           name='internshipStart'
           value={intern.internshipStart?.split('T')[0] || ''}
           onChange={onChangeHandler}
+          error={internshipStartErrors[0]}
         />
         <Input
           label='Internship end'
@@ -71,6 +82,7 @@ const EditIntern = () => {
           name='internshipEnd'
           value={intern.internshipEnd?.split('T')[0] || ''}
           onChange={onChangeHandler}
+          error={internshipEndErrors[0]}
         />
         <Input type='submit' />
       </form>
