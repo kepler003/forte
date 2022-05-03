@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import Input from './components/Input';
 
 const EditIntern = () => {
   const { id } = useParams();
@@ -25,12 +26,11 @@ const EditIntern = () => {
     <div>
       <NavLink to='/'>Back to list </NavLink>
       <form>
-        <label>Name</label>
-        <input type='text' name='name' />
-        <label>Email</label>
-        <input type='text' name='email' />
-
-        <input type='submit' value='Submit' />
+        <Input label='Name' type='text' name='name' />
+        <Input label='Email' type='email' name='email' />
+        <Input label='Internship start' type='date' name='internshipStart' />
+        <Input label='Internship end' type='date' name='internshipEnd' />
+        <Input type='submit' />
       </form>
     </div>
   );
