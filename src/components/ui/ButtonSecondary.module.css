@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 0.8rem 1.2rem 1.2rem;
+  background-color: transparent;
+  color: var(--color-base-2);
+  border: none;
+  transition: background-color 100ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: var(--color-base-3);
+}
+
+.button:focus {
+  color: var(--color-base-3);
+  box-shadow: 0 0 0 0.2rem var(--color-focus);
+  outline: none;
+}
+
+.button:active {
+  color: var(--color-base-2);
+}
+
+.button:disabled {
+  color: var(--color-base-2);
+  opacity: 0.25;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.2rem;
+}
