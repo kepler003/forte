@@ -1,4 +1,8 @@
 .button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   padding: 1.2rem 4rem;
   background-color: var(--color-base-1);
   color: var(--color-white);
