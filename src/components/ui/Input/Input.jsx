@@ -9,7 +9,7 @@ const Input = ({ label, type, error, className, boxClassName, ...props }) => {
   // Set invalid if error
   useEffect(() => {
     if (error) {
-      inputRef.current.setCustomValidity('Invalid');
+      inputRef.current.setCustomValidity('Invalid input');
     } else {
       inputRef.current.setCustomValidity('');
     }
