@@ -21,7 +21,6 @@ const EditIntern = () => {
     min: intern.internshipStart,
   });
 
-  // Load intern from db
   useEffect(() => {
     fetch(`http://localhost:3001/interns/${id}`, {
       headers: { 'Content-Type': 'application/json' },
