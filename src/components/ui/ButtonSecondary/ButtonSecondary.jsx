@@ -5,11 +5,7 @@ import cls from './ButtonSecondary.module.css';
 
 const ButtonSecondary = ({ children, className, icon, to, ...props }) => {
   const classNames = classes(className, cls.button, 'text-bold');
-  const iconElem = icon && (
-    <span className={cls.icon}>
-      <Icon icon={icon} />
-    </span>
-  );
+  const iconElem = icon && <Icon className={cls.icon} icon={icon} />;
 
   return to ? (
     <NavLink to={to} className={classNames} {...props}>
