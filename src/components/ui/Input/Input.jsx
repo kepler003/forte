@@ -15,15 +15,18 @@ const Input = ({ label, type, error, className, boxClassName, ...props }) => {
     }
   }, [error]);
 
+  // Event handlers
   const dateIconClickHandler = () => {
     inputRef.current.focus();
     inputRef.current.showPicker();
   };
 
+  // ClassNames
   const inputBoxClassNames = classes(cls.box, boxClassName);
   const labelClassNames = classes(cls.label, 'text-medium-l');
   const inputClassNames = classes(className, cls.input, 'text-l');
 
+  // Helper elements
   const labelElem = label && <label className={labelClassNames}>{label}</label>;
   const warningIconElem = error && (
     <Icon
