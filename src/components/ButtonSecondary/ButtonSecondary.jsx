@@ -1,4 +1,4 @@
-import Icon from './Icon';
+import Icon from '../Icon/Icon';
 import cls from './ButtonSecondary.module.css';
 
 const ButtonSecondary = ({ children, className, icon, ...props }) => {
