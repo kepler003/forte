@@ -6,7 +6,7 @@ import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div className='App'>
+    <>
       <Header />
       <main className='main'>
         <Routes>
@@ -14,7 +14,7 @@ function App() {
           <Route path='/' element={<InternList />} />
         </Routes>
       </main>
-    </div>
+    </>
   );
 }
 
