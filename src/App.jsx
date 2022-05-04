@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import EditIntern from './EditIntern';
-import InternList from './InternList';
+import InternList from './components/InternList/InternList';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 
