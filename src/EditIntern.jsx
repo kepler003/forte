@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useValidator from './hooks/useValidator';
-import Input from './components/Input';
+import Input from './components/Input/Input';
 
 const EditIntern = () => {
   const { id } = useParams();
