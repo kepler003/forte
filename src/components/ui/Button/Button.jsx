@@ -2,7 +2,7 @@ import classes from '../../../utils/classes';
 import cls from './Button.module.css';
 
 const Button = ({ children, className, ...props }) => {
-  const classNames = classes(cls.button, className, 'text-medium');
+  const classNames = classes(cls.button, className, 'text-bold');
   return (
     <button className={classNames} {...props}>
       {children}

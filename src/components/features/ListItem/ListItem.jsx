@@ -5,7 +5,7 @@ import cls from './ListItem.module.css';
 const ListItem = ({ id, name, ...props }) => {
   return (
     <li className={cls.li} {...props}>
-      <span className={classes(cls.label, 'text-l')}>{name}</span>
+      <span className={classes(cls.label, 'text-large')}>{name}</span>
       <ButtonSecondary
         to={`/interns/${id}`}
         icon='edit'

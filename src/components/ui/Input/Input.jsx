@@ -23,8 +23,8 @@ const Input = ({ label, type, error, className, boxClassName, ...props }) => {
 
   // ClassNames
   const inputBoxClassNames = classes(cls.box, boxClassName);
-  const labelClassNames = classes(cls.label, 'text-medium-l');
-  const inputClassNames = classes(className, cls.input, 'text-l');
+  const labelClassNames = classes(cls.label, 'text-bold-large');
+  const inputClassNames = classes(className, cls.input, 'text-large');
 
   // Helper elements
   const labelElem = label && <label className={labelClassNames}>{label}</label>;

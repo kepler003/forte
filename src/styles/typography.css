@@ -1,4 +1,4 @@
-.text-heading {
+.heading {
   font-size: 4rem;
   line-height: 4.8rem;
   font-weight: 500;
@@ -10,18 +10,18 @@
   line-height: 2.4rem;
 }
 
-.text-l {
+.text-large {
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
 
-.text-medium {
+.text-bold {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 500;
 }
 
-.text-medium-l {
+.text-bold-large {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 500;

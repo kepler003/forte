@@ -80,7 +80,7 @@ const EditIntern = () => {
         </ButtonSecondary>
       </div>
       <Card>
-        <h1 className='text-heading'>Edit</h1>
+        <h1 className='heading'>Edit</h1>
         <form className={cls.form} onSubmit={onSubmitHandler}>
           <Input
             label='Full name *'

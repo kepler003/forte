@@ -17,7 +17,7 @@ const InternList = () => {
 
   return (
     <Card className={cls.card}>
-      <h1 className='text-heading'>Participants</h1>
+      <h1 className='heading'>Participants</h1>
       <ul className={cls.list}>
         {interns.map(({ id, name }) => (
           <ListItem key={id} id={id} name={name} />
