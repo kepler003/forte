@@ -2,8 +2,6 @@ import classes from '../../../utils/classes';
 import cls from './Icon.module.css';
 
 const Icon = ({ icon, color, className, ...props }) => {
-  const classNames = classes(className, cls.box);
-
   const SVGS = {
     arrowLeft: (
       <svg
@@ -86,7 +84,7 @@ const Icon = ({ icon, color, className, ...props }) => {
   }
 
   return (
-    <span className={classNames} {...props}>
+    <span className={classes(className, cls.box)} {...props}>
       {SVGS[icon]}
     </span>
   );
