@@ -1,7 +1,8 @@
+import classes from '../../../utils/classes';
 import cls from './Icon.module.css';
 
 const Icon = ({ icon, color, className, ...props }) => {
-  const classNames = [className, cls.box].join(' ');
+  const classNames = classes(className, cls.box);
 
   const SVGS = {
     arrowLeft: (

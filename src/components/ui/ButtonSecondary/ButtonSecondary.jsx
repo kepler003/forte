@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import classes from '../../../utils/classes';
 import Icon from '../Icon/Icon';
 import cls from './ButtonSecondary.module.css';
 
 const ButtonSecondary = ({ children, className, icon, to, ...props }) => {
-  const classNames = [className, cls.button, 'text-medium'].join(' ');
+  const classNames = classes(className, cls.button, 'text-medium');
   const iconElem = icon && (
     <span className={cls.icon}>
       <Icon icon={icon} />

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import classes from '../../../utils/classes';
 import Icon from '../Icon/Icon';
 import cls from './Input.module.css';
 
@@ -19,9 +20,9 @@ const Input = ({ label, type, error, className, boxClassName, ...props }) => {
     inputRef.current.showPicker();
   };
 
-  const inputBoxClassNames = [cls.box, boxClassName].join(' ');
-  const labelClassNames = [cls.label, 'text-medium-l'].join(' ');
-  const inputClassNames = [className, cls.input, 'text-l'].join(' ');
+  const inputBoxClassNames = classes(cls.box, boxClassName);
+  const labelClassNames = classes(cls.label, 'text-medium-l');
+  const inputClassNames = classes(className, cls.input, 'text-l');
 
   const labelElem = label && <label className={labelClassNames}>{label}</label>;
   const warningIconElem = error && (

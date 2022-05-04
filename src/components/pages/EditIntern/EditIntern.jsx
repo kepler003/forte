@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import useValidator from '../../../hooks/useValidator';
+import classes from '../../../utils/classes';
 import Card from '../../features/Card/Card';
 import Input from '../../ui/Input/Input';
 import ButtonSecondary from '../../ui/ButtonSecondary/ButtonSecondary';
@@ -104,7 +105,7 @@ const EditIntern = () => {
             label='Internship start *'
             type='date'
             name='internshipStart'
-            boxClassName={[cls.inputBox, cls.dateInputBox].join(' ')}
+            boxClassName={classes(cls.inputBox, cls.dateInputBox)}
             value={intern.internshipStart?.split('T')[0] || ''}
             onChange={onChangeHandler}
             error={internshipStartErrors[0]}
@@ -113,12 +114,14 @@ const EditIntern = () => {
             label='Internship end *'
             type='date'
             name='internshipEnd'
-            boxClassName={[cls.inputBox, cls.dateInputBox].join(' ')}
+            boxClassName={classes(cls.inputBox, cls.dateInputBox)}
             value={intern.internshipEnd?.split('T')[0] || ''}
             onChange={onChangeHandler}
             error={internshipEndErrors[0]}
           />
-          <Button type='submit' className={cls.submitBtn}>Submit</Button>
+          <Button type='submit' className={cls.submitBtn}>
+            Submit
+          </Button>
         </form>
       </Card>
     </>
