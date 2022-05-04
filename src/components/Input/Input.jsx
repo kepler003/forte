@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import Icon from '../Icon/Icon';
 import cls from './Input.module.css';
 
-const Input = ({ label, type, error, className, ...props }) => {
+const Input = ({ label, type, error, className, boxClassName, ...props }) => {
   const inputRef = useRef();
 
   // Set invalid if error
@@ -19,6 +19,7 @@ const Input = ({ label, type, error, className, ...props }) => {
     inputRef.current.showPicker();
   };
 
+  const inputBoxClassNames = [cls.box, boxClassName].join(' ');
   const labelClassNames = [cls.label, 'text-medium-l'].join(' ');
   const inputClassNames = [className, cls.input, 'text-l'].join(' ');
 
@@ -40,7 +41,7 @@ const Input = ({ label, type, error, className, ...props }) => {
   const errorElem = error && <p className={cls.error}>{error}</p>;
 
   return (
-    <div className={cls.box}>
+    <div className={inputBoxClassNames}>
       {labelElem}
       <div className={cls.inputBox}>
         <input
