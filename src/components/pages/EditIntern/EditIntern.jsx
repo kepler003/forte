@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import useValidator from '../../hooks/useValidator';
-import Card from '../Card/Card';
-import Input from '../Input/Input';
-import ButtonSecondary from '../ButtonSecondary/ButtonSecondary';
-import Button from '../Button/Button';
+import useValidator from '../../../hooks/useValidator';
+import Card from '../../features/Card/Card';
+import Input from '../../ui/Input/Input';
+import ButtonSecondary from '../../ui/ButtonSecondary/ButtonSecondary';
+import Button from '../../ui/Button/Button';
 import cls from './EditIntern.module.css';
 
 const EditIntern = () => {

@@ -1,5 +1,5 @@
 import cls from './Header.module.css';
-import logo from '../../images/logo.svg';
+import logo from '../../../images/logo.svg';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {

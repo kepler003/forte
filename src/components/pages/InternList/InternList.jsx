@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../Card/Card';
-import ListItem from '../ListItem/ListItem';
+import Card from '../../features/Card/Card';
+import ListItem from '../../features/ListItem/ListItem';
 import cls from './InternList.module.css';
 
 const InternList = () => {

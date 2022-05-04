@@ -1,4 +1,4 @@
-import ButtonSecondary from '../ButtonSecondary/ButtonSecondary';
+import ButtonSecondary from '../../ui/ButtonSecondary/ButtonSecondary';
 import cls from './ListItem.module.css';
 
 const ListItem = ({ id, name, ...props }) => {
