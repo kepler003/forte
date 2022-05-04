@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import ListItem from './components/ListItem/ListItem';
 
 const InternList = () => {
   const [interns, setInterns] = useState([]);
@@ -14,13 +14,11 @@ const InternList = () => {
   }, []);
 
   return (
-    <div>
-      {interns.map((u) => (
-        <div key={u.id}>
-          {u.name} <NavLink to={`/interns/${u.id}`}>Edit</NavLink>
-        </div>
+    <ul style={{ listStyle: 'none' }}>
+      {interns.map(({ id, name }) => (
+        <ListItem key={id} id={id} name={name} />
       ))}
-    </div>
+    </ul>
   );
 };
 
