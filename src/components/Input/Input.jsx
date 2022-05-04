@@ -5,6 +5,7 @@ import cls from './Input.module.css';
 const Input = ({ label, type, error, className, ...props }) => {
   const inputRef = useRef();
 
+  // Set invalid if error
   useEffect(() => {
     if (error) {
       inputRef.current.setCustomValidity('Invalid');
@@ -22,7 +23,6 @@ const Input = ({ label, type, error, className, ...props }) => {
   const inputClassNames = [className, cls.input, 'text-l'].join(' ');
 
   const labelElem = label && <label className={labelClassNames}>{label}</label>;
-
   const warningIconElem = error && (
     <Icon
       className={type === 'date' ? cls.dateWarningIcon : cls.warningIcon}
@@ -30,7 +30,6 @@ const Input = ({ label, type, error, className, ...props }) => {
       color='#a3270c'
     />
   );
-
   const dateIconElem = type === 'date' && (
     <Icon
       className={cls.dateIcon}
@@ -38,10 +37,7 @@ const Input = ({ label, type, error, className, ...props }) => {
       onClick={dateIconClickHandler}
     />
   );
-
   const errorElem = error && <p className={cls.error}>{error}</p>;
-
-  console.log(cls);
 
   return (
     <div className={cls.box}>
