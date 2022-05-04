@@ -1,15 +1,20 @@
-import "./App.css";
-import EditIntern from "./EditIntern";
-import InternList from "./InternList";
-import { Routes, Route } from "react-router-dom";
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import EditIntern from './EditIntern';
+import InternList from './InternList';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/interns/:id" exact element={<EditIntern />} />
-        <Route path="/" element={<InternList />} />
-      </Routes>
+    <div className='App'>
+      <Header />
+      <Main>
+        <Routes>
+          <Route path='/interns/:id' exact element={<EditIntern />} />
+          <Route path='/' element={<InternList />} />
+        </Routes>
+      </Main>
     </div>
   );
 }
