@@ -81,6 +81,7 @@ const EditIntern = () => {
           name='name'
           value={intern.name || ''}
           onChange={onChangeHandler}
+          required
           error={nameErrors[0]}
         />
         <Input
@@ -89,6 +90,7 @@ const EditIntern = () => {
           name='email'
           value={intern.email || ''}
           onChange={onChangeHandler}
+          required
           error={emailErrors[0]}
         />
         <Input
@@ -97,6 +99,7 @@ const EditIntern = () => {
           name='internshipStart'
           value={intern.internshipStart?.split('T')[0] || ''}
           onChange={onChangeHandler}
+          required
           error={internshipStartErrors[0]}
         />
         <Input
@@ -105,6 +108,7 @@ const EditIntern = () => {
           name='internshipEnd'
           value={intern.internshipEnd?.split('T')[0] || ''}
           onChange={onChangeHandler}
+          required
           error={internshipEndErrors[0]}
         />
         <Input type='submit' />
